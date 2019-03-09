@@ -20,4 +20,8 @@ Route::group(['middleware'=>['pullback']],function (){
 
 Route::group(['middleware'=>['logcheck']],function () {
     Route::get('/dashboard', 'basicviewcontroller@dashboard')->name('Dashboard');
+    Route::get('/source', 'basicviewcontroller@source')->name('Source');
+
+    Route::post('/dataset/input', 'postdataset@store');
+
 });

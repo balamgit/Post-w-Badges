@@ -7,10 +7,9 @@
                         class="fa fa-th-large"></i></a>
         </li>
 
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Home</a>
+        <li class="nav-item d-none d-sm-inline-block text-center">
+            <a href="/dashboard" class="nav-link text-center"><h3>RUMORS DETECTION <small>using neural networks with probability mathematics</small></h3></a>
         </li>
-
     </ul>
 
     <!-- Right navbar links -->
@@ -97,7 +96,7 @@
        -->
 
         <a class="nav-link" title="logout" href="/logout">
-            <i class="fa fa-sign-out fa-lg"></i>
+            <h4>{{session('user')}} <i class="fa fa-sign-out fa-lg"></i></h4>
         </a>
 
     </ul>

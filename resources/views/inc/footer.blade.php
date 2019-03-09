@@ -13,37 +13,20 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-                     with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview" style="color: white;">
-                    <a href="#" class="nav-link" >
-                        <i class="nav-icon fa fa-dashboard"></i>
+                <li class="nav-item">
+                    <a href="/dashboard" class="nav-link">
+                        <i class="nav-icon fa fa-database"></i>
                         <p>
-                            Starter Pages
-                            <i class="right fa fa-angle-left"></i>
+                            Trained Dataset
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Active Page</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Inactive Page</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-th"></i>
+                    <a href="/source" class="nav-link">
+                        <i class="nav-icon fa fa-upload"></i>
                         <p>
-                            Simple Link
-                            <span class="right badge badge-danger">New</span>
+                            Upload source data
                         </p>
                     </a>
                 </li>
