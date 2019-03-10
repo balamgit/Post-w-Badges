@@ -18,7 +18,7 @@
 @endif
 <div class="login-box">
     <div class="login-logo">
-        <b>Have a nice day!</b>
+        <b>scrootit!</b>
 
     </div>
 
