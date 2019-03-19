@@ -6,40 +6,9 @@
     <div class="container">
       <!--main-row-->
         <div class="row">
-            <!--profile-column-->
-            <div class="col-3 shadow-lg p-3 mb-3 mt-3 bg-white rounded" style="max-height: 500px !important;">
-                <div>
-                    <img src="{{asset('storage/wishes.jpg')}}" class="rounded-circle shadow-lg my-3 mx-auto d-block" width="120px" alt="DP">
-                </div>
-                @foreach($users as $user)
-                    <table class="table">
-                        <tr>
-                            <td>Name:</td>
-                            <td>{{$user->user}}</td>
-                        </tr>
-                        <tr>
-                            <td>Age:</td>
-                            <td>{{$user->age}}</td>
-                        </tr>
-                        <tr>
-                            <td>Gender:</td>
-                            <td>{{$user->gender}}</td>
-                        </tr>
-                        <tr>
-                            <td>Mail:</td>
-                            <td>{{$user->mail}}</td>
-                        </tr>
-                        <tr>
-                            <td>Hobbies:</td>
-                            <td>{{$user->hobie}}</td>
-                        </tr>
-                    </table>
-                @endforeach
-            </div>
-            <!--/.profile-column-->
 
             <!--form & feed column-->
-            <div class="col-7 mt-3">
+            <div class="col-7 mt-3 mx-auto">
                 <!--write post-->
                <form id="IdPost" method="POST">
                    {{csrf_field()}}
@@ -62,7 +31,7 @@
                </form>
                 <!--/.write post-->
 
-                <strong class="m-2">News feeds!</strong>
+                <strong class="m-2">My Timeline!</strong>
                 @foreach($posts as $post)
                     <div class="shadow-lg p-2 mt-2 bg-white rounded">
                         <p>

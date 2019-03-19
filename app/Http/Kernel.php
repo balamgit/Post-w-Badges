@@ -62,6 +62,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'logcheck' => \App\Http\Middleware\logcheck::class,
         'pullback' => \App\Http\Middleware\pullback::class,
+        'admin' => \App\Http\Middleware\admincheck::class,
 
     ];
 

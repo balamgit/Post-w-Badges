@@ -20,8 +20,14 @@ Route::group(['middleware'=>['pullback']],function (){
 
 Route::group(['middleware'=>['logcheck']],function () {
     Route::get('/dashboard', 'basicviewcontroller@dashboard')->name('Dashboard');
-    Route::get('/source', 'basicviewcontroller@source')->name('Source');
+    Route::get('/myposts', 'basicviewcontroller@myposts')->name('My_Posts');
 
+    Route::post('/dashboard', 'basicviewcontroller@storepost');
+
+});
+
+Route::group(['middleware'=>['logcheck','admin']],function () {
+    Route::get('/admin', 'basicviewcontroller@admin')->name('Admin');
     Route::post('/dataset/input', 'postdataset@store');
 
 });

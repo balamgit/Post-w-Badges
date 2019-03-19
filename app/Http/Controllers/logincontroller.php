@@ -18,10 +18,12 @@ class logincontroller extends Controller
         $checks = users::where(['user' => $request->user, 'pass' => $request->pass])->get();
         foreach ($checks as $check) {
             $uname = $check->user;
+            $admin=$check->priv;
         }
         if ($checks) {
             session()->put([
                 'user' => $uname,
+                'admin' => $admin,
             ]);
             return redirect('/dashboard');
         } else {
