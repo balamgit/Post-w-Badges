@@ -67,8 +67,17 @@
                     <div class="shadow-lg p-2 mt-2 bg-white rounded">
                         <p>
                             <img src="{{asset('storage/wishes.jpg')}}" class="rounded-circle shadow-lg" width="35px" alt="DP">
-                            {{$post->user}}
-                            <small class="float-right" style="color: lightskyblue;">posted at 24th jan 2019, 02:05PM </small>
+                            {{$post->user.' '}}
+                            @if($post->fake>=70)
+                            <span class="badge badge-pill badge-danger">{{$post->fake}}% fake</span>
+                            @elseif($post->fake>=50)
+                                <span class="badge badge-pill badge-warning">{{$post->fake}}% fake</span>
+                            @elseif($post->fake>=40)
+                                <span class="badge badge-pill badge-primary">{{$post->fake}}% fake</span>
+                            @elseif($post->fake<=30)
+                                <span class="badge badge-pill badge-success"><i class="fa fa-check"></i>Trusted</span>
+                            @endif
+                              <small class="float-right" style="color: lightskyblue;">posted at 24th jan 2019, 02:05PM </small>
                         </p>
                         <p class="bg-light-gradient p-2 rounded">
                             <strong>{{$post->title}}</strong><br/>

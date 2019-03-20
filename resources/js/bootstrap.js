@@ -12,6 +12,7 @@ try {
     require('bootstrap/dist/js/bootstrap.min');
     require('admin-lte/dist/js/adminlte.min');
     require('admin-lte/plugins/datatables/dataTables.bootstrap4');
+    require('datatables.net-select-bs4/js/select.bootstrap4.min');
 } catch (e) {}
 
 /**

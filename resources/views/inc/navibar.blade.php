@@ -1,18 +1,8 @@
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
     <!-- Left navbar links -->
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mx-auto">
 
-       @if(session('admin')=='admin')
-            <li class="nav-item">
-                <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
-                        class="fa fa-th-large"></i></a>
-            </li>
-        <li class="nav-item d-none d-sm-inline-block text-center">
-            <a href="/dashboard" class="nav-link text-center"><h3>RUMORS DETECTION <small>using neural networks with probability mathematics</small></h3></a>
-        </li>
-           @endif
-        @if(session('admin')=='user')
             <li class="nav-item d-none d-sm-inline-block text-center">
                 <a href="/dashboard" class="nav-link text-center"><h3>Scrootit Home</h3></a>
             </li>
@@ -24,10 +14,6 @@
                <li class="nav-item d-none d-sm-inline-block text-center">
                    <a href="/myfriends" class="nav-link text-center"><h3>My Friends</h3></a>
                </li>
-               <li class="nav-item d-none d-sm-inline-block text-center">
-                   <a href="/mynotifications" class="nav-link text-center"><h3>My Notifications</h3></a>
-               </li>
-            @endif
 
     </ul>
 

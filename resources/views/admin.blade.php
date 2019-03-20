@@ -1,4 +1,4 @@
-@extends('base_layouts.app')
+@extends('base_layouts.app2')
 
 @section('content')
     @include('modals.add')
@@ -7,13 +7,12 @@
     <!--row for porduct table-->
     <div class="container-fluid">
         <br/>
+        <h3>RUMORS DETECTION <small>using neural networks with probability mathematics</small></h3>
         <div class="card">
             <div class="card-header">
-                <h3 class="box-title" style="display: inline;">Table</h3>
+                <h3 class="box-title" style="display: inline;">Training Dataset</h3>
                 <a href="#" title="add new training data" data-toggle="modal" data-target="#IdAddModal" style="padding-left: 20px;"><i class="fa fa-plus fa-lg"></i></a>
-                <a href="#" title="Edit data" id="IdThrowEdit" style="padding-left: 20px;"><i class="fa fa-pencil-square-o fa-lg"></i></a>
-                <a href="#" title="Delete selected row" id="IdThrowDelete" class="pull-right" style="padding-right: 30px;"><i class="fa fa-trash-o fa-lg"></i></a>
-
+                <a href="#" class="float-right" id="deleteopen"  title="Delete selected" style="padding-right: 20px;padding-left: 20px;"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></a>
 
             </div>
             <!-- /.box-header -->
@@ -53,6 +52,47 @@
                      select: true,
                  });
                  //table initialztn end
+                 function getids(){
+                     var ids =[];
+                     $.map(table.rows('.selected').data(), function (item) {
+                         ids.push(item[0]);
+                     });
+                     //console.log(ids);
+                     return ids;
+                 }
+
+                 $('#deleteopen').click(function (e) {
+                    e.preventDefault();
+                     var id=getids();
+                     $('#DeleteId').val(id);
+                     if(id.length===1){
+                         $('#IdDeleteModal').modal('show');
+                     }
+                     else {
+                         alert('select any one row');
+                     }
+                 });
+
+                 $('#IdDeleteForm').on('submit',function (e) {
+                     e.preventDefault();
+                         $.ajax({
+                             url:'/admin',
+                             type:'POST',
+                             data:new FormData(this),
+                             contentType:false,
+                             processData:false,
+                             success:function(result)
+                             {
+                                 $('#IdMyResults').html(result);
+                                 $('#IdDeleteModal').modal('hide');
+                                 $('#IdAlertModal').modal('show');
+                             }
+                         });
+                 });
+
+                 $('#IdRefreshClick').click(function () {
+                     $(location).attr('href','{{route(\Illuminate\Support\Facades\Route::currentRouteName())}}')
+                 });
 
 
 

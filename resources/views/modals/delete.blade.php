@@ -2,11 +2,11 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title">Are sure to delete selected data</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Are sure to delete selected data</h4>
             </div>
-            <form id="IdDeleteForm" method="post">
+            <form id="IdDeleteForm" method="POST">
                 {{csrf_field()}}
                 {{method_field('DELETE')}}
                 <div class="modal-body">
@@ -15,8 +15,9 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">-No-</button>
-                    <button type="submit" class="btn btn-danger">yes sure!</button>
+                    <button type="submit" class="btn btn-danger float-left">yes sure!</button>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">-No-</button>
                 </div>
             </form>
         </div>
