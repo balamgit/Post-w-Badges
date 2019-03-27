@@ -32,7 +32,7 @@ class logincontroller extends Controller
         }
     }
     catch (\Exception $e){
-            session()->flash('err_msg','Something went worng contact admin'.$e);
+            session()->flash('err_msg','Something went worng contact admin');
             return back();
         }
     }

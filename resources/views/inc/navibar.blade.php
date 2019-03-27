@@ -4,7 +4,7 @@
     <ul class="navbar-nav mx-auto">
 
             <li class="nav-item d-none d-sm-inline-block text-center">
-                <a href="/dashboard" class="nav-link text-center"><h3>Scrootit Home</h3></a>
+                <a href="/dashboard" class="nav-link text-center"><img src="{{asset('storage/logo.png')}}" width="130px"></a>
             </li>
 
                <li class="nav-item d-none d-sm-inline-block text-center">

@@ -77,7 +77,7 @@
                             @elseif($post->fake<=30)
                                 <span class="badge badge-pill badge-success"><i class="fa fa-check"></i>Trusted</span>
                             @endif
-                              <small class="float-right" style="color: lightskyblue;">posted at 24th jan 2019, 02:05PM </small>
+                              <small class="float-right" style="color: lightskyblue;">posted at {{date('d-m-Y',strtotime($post->created_at))}} </small>
                         </p>
                         <p class="bg-light-gradient p-2 rounded">
                             <strong>{{$post->title}}</strong><br/>

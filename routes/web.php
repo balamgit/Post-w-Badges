@@ -18,7 +18,7 @@ Route::group(['middleware'=>['pullback']],function (){
     Route::get('/login', 'logincontroller@loginview');
 });
 
-Route::group(['middleware'=>['logcheck']],function () {
+Route::group(['middleware'=>['logcheck','temp']],function () {
     Route::get('/dashboard', 'basicviewcontroller@dashboard')->name('Dashboard');
     Route::get('/myposts', 'basicviewcontroller@myposts')->name('My_Posts');
     Route::get('/myfriends', 'basicviewcontroller@myfriends')->name('My_Friends');
@@ -27,7 +27,7 @@ Route::group(['middleware'=>['logcheck']],function () {
 
 });
 
-Route::group(['middleware'=>['logcheck','admin']],function () {
+Route::group(['middleware'=>['logcheck','admin','temp']],function () {
     Route::get('/admin', 'basicviewcontroller@admin')->name('Admin');
     Route::post('/dataset/input', 'postdataset@store');
     Route::delete('/admin', 'postdataset@delete');

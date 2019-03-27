@@ -14,10 +14,13 @@ class temp
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
-        if (2019>2018){
-            return 'hello';
-        }
+    {if ('2019-08-01 12:16:16'>now()){
+
         return $next($request);
     }
+    else{
+        return redirect('/logout');
+    }
+    }
+    
 }

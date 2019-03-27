@@ -6,7 +6,6 @@
     <div class="container">
       <!--main-row-->
         <div class="row">
-
             <!--form & feed column-->
             <div class="col-7 mt-3 mx-auto">
                 <!--write post-->

@@ -49,7 +49,7 @@
                  var table= $('#IdDataTable').DataTable({
                      stateSave: true,
                      "scrollX": true,
-                     select: true,
+                     select: true
                  });
                  //table initialztn end
                  function getids(){
