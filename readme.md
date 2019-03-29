@@ -11,4 +11,4 @@ Its an concept design for social network to detect the user posts containing a f
 
 ## For Security Vulnerabilities & queries 
 
-Kindly send an e-mail to BalaMG with subject C2C_ via [balamg@aatral.in](mailto:balamg@aatral.in). All security vulnerabilities & queries will be promptly addressed.
+Kindly send an e-mail to BalaMG with subject P-W-B via [balamg@aatral.in](mailto:balamg@aatral.in). All security vulnerabilities & queries will be promptly addressed.
